@@ -23,9 +23,6 @@ public class elfMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mouseWorldPosition - (Vector2)transform.position).normalized;
-        transform.up = direction;
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
         input = new Vector2(h, v).normalized;
