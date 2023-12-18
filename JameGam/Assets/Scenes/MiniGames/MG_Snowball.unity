@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 858251607}
   - component: {fileID: 858251606}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Elf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

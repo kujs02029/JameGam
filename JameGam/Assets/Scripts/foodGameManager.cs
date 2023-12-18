@@ -18,7 +18,6 @@ public class foodGameManager : MonoBehaviour
         {
             int a = Random.Range(0, types.Count);
             slots[i].tag = types[a];
-            print(slots[i].tag);
             types.RemoveAt(a);
         }
     }
