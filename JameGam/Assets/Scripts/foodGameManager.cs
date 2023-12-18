@@ -7,6 +7,7 @@ public class foodGameManager : MonoBehaviour
     public List<GameObject> foods;
     public List<GameObject> slots;
     public List<string> types;
+    public List<Sprite> sprites;
     void Start()
     {
         for(int i = 0; i < 6; i++)
@@ -18,6 +19,8 @@ public class foodGameManager : MonoBehaviour
         {
             int a = Random.Range(0, types.Count);
             slots[i].tag = types[a];
+            slots[i].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites[a];
+            sprites.RemoveAt(a);
             types.RemoveAt(a);
         }
     }

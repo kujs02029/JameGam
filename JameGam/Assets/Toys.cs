@@ -10,7 +10,7 @@ public class Toys : MonoBehaviour
 
     private void Start()
     {
-        if(Random.Range(0, 3) == 2)
+        if(Random.Range(0, 2) == 1)
         {
             bad = true;
         }

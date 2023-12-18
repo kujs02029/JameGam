@@ -5,25 +5,26 @@ using UnityEngine;
 public class TreeManager : MonoBehaviour
 {
     [SerializeField] bar br;
-    int health = 100;
+    public int health = 100;
 
     public void damageTree()
     {
+        print(health);
         if(br.gameObject.transform.position.y > 0)
         {
-            health -= 50;
+            health -= Random.Range(40, 60);
         }
         else if(br.gameObject.transform.position.y > 1)
         {
-            health -= 35;
+            health -= Random.Range(25, 45);
         }
         else if (br.gameObject.transform.position.y > 1)
         {
-            health -= 25;
+            health -= Random.Range(15, 35);
         }
         else if (br.gameObject.transform.position.y > 1)
         {
-            health -= 10;
+            health -= Random.Range(5, 20);
         }
         br.stop = false;
     }
@@ -31,7 +32,7 @@ public class TreeManager : MonoBehaviour
     {
         if (health <= 0)
         {
-
+            print("done");
         }
     }
 }
