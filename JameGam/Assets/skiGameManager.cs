@@ -5,6 +5,7 @@ using UnityEngine;
 public class skiGameManager : MonoBehaviour
 {
     public GameObject hurdle;
+    public List<GameObject> cosmetics;
     public float interval;
     // Start is called before the first frame update
     void Start()
@@ -13,7 +14,7 @@ public class skiGameManager : MonoBehaviour
     }
     private void Update()
     {
-
+        
         float v = Input.GetAxis("Vertical");
 
         if (v < 0)
@@ -28,6 +29,14 @@ public class skiGameManager : MonoBehaviour
     void SpawnHurdle()
     {
         Instantiate(hurdle, new Vector2(Random.Range(-5f, 5f), -8), Quaternion.identity);
+        Invoke("SpawnHurdle", interval);
+    }
+    void SpawnCos()
+    {
+        if(Random.value > .5f)
+            Instantiate(cosmetics[Random.Range(0, cosmetics.Count)], new Vector2(Random.Range(-10f, -5f), -8), Quaternion.identity);
+        else
+            Instantiate(cosmetics[Random.Range(0, cosmetics.Count)], new Vector2(Random.Range(5f, 10f), -8), Quaternion.identity);
         Invoke("SpawnHurdle", interval);
     }
 }

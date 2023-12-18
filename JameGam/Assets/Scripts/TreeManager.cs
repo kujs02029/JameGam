@@ -26,6 +26,11 @@ public class TreeManager : MonoBehaviour
         {
             health -= Random.Range(5, 20);
         }
+        Invoke("stopI", 1);
+    }
+
+    void stopI()
+    {
         br.stop = false;
     }
     private void Update()

@@ -304,7 +304,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed9bcc4d96b40849a154775ea6f1141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s: []
+  s:
+  - {fileID: 21300000, guid: 98dd938c8e88cf34bb1afc274859ba21, type: 3}
+  - {fileID: 21300000, guid: 18c1e0d3f8513d244b4aac28dc5b03b0, type: 3}
+  - {fileID: 21300000, guid: a5dc724fb47754841927d37b16c0add6, type: 3}
+  - {fileID: 21300000, guid: 9b3c351b22025eb4393e7a3c054bd5ed, type: 3}
+  - {fileID: 21300000, guid: 5ab98c10d5aa8c741a761b6919763014, type: 3}
+  - {fileID: 21300000, guid: 3ca25785c233e884bb5cf437e5849a49, type: 3}
 --- !u!1 &488020739
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +322,7 @@ GameObject:
   - component: {fileID: 488020741}
   - component: {fileID: 488020740}
   m_Layer: 0
-  m_Name: Bar (1)
+  m_Name: Scale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +515,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.586445, g: 0.764151, b: 0.5731132, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -671,7 +677,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 9b9cc93d3af09764ea9ae4cac8259039, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b831a79cecd78f54496cc19ba5ea375b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -692,7 +698,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.44, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.3711084, y: 0.37110838, z: 0.9821}
+  m_LocalScale: {x: 0.38465387, y: 0.37110838, z: 0.9821}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -712,7 +718,7 @@ MonoBehaviour:
   speed: 5
   stop: 0
   rb: {fileID: 1346928004}
-  tree: {fileID: 0}
+  tree: {fileID: 910604658}
 --- !u!50 &1346928004
 Rigidbody2D:
   serializedVersion: 4

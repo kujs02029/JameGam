@@ -17,7 +17,7 @@ public class bar : MonoBehaviour
         {
             if (movement)
             {
-                if (gameObject.transform.position.y <= 3.9f)
+                if (gameObject.transform.position.y <= 3.66f)
                 {
                     rb.MovePosition(rb.position + new Vector2(0, 1) * speed * Time.fixedDeltaTime);
                 }
@@ -28,7 +28,7 @@ public class bar : MonoBehaviour
             }
             if (!movement)
             {
-                if (gameObject.transform.position.y >= -3.9f)
+                if (gameObject.transform.position.y >= -3.66f)
                 {
                     rb.MovePosition(rb.position + new Vector2(0, -1) * speed * Time.fixedDeltaTime);
                 }
