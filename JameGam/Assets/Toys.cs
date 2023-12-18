@@ -5,6 +5,7 @@ using UnityEngine;
 public class Toys : MonoBehaviour
 {
     public bool bad;
+    public Sprite broken;
     public float speed;
 
     private void Start()
@@ -13,6 +14,8 @@ public class Toys : MonoBehaviour
         {
             bad = true;
         }
+        if (bad)
+            GetComponent<SpriteRenderer>().sprite = broken;
     }
     private void FixedUpdate()
     {
