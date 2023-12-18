@@ -17,7 +17,11 @@ public class Tree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (treeManager.health < 20)
+        if(treeManager.health <= 0)
+        {
+            sp.sprite = s[5];
+        }
+        else if (treeManager.health < 20)
         {
             sp.sprite = s[4];
         }

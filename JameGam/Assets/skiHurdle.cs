@@ -5,6 +5,7 @@ using UnityEngine;
 public class skiHurdle : MonoBehaviour
 {
     public float speed;
+    public bool cos;
     bool touch;
     private void Start()
     {
@@ -12,7 +13,7 @@ public class skiHurdle : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (!touch)
+        if (!touch && !cos)
         {
             print("DEATH");
         }
