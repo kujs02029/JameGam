@@ -14,12 +14,14 @@ public class ToyGameManager : MonoBehaviour
 
     void SpawnToys()
     {
-        Instantiate(toys[Random.Range(0, toys.Count)], new Vector2(-12, 7), Quaternion.identity);
+        Instantiate(toys[Random.Range(0, toys.Count)], new Vector2(-16, 7), Quaternion.identity);
         Invoke("SpawnToys", interval);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.GetComponent<Toys>())
+            Destroy(collision.gameObject, 1f);
         if (collision.GetComponent<Toys>().bad)
         {
             print("DEATH");

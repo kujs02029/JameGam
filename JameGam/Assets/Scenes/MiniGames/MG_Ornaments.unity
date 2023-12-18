@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4745098, g: 0.3560368, b: 0.19215688, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -246,6 +246,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ornaments:
   - {fileID: 8556399089867305584, guid: 3e996c9e53f423c4ab1b72859a4cb661, type: 3}
+  - {fileID: 7748520637665715159, guid: 81651720ebee229498a1792d68fce825, type: 3}
+  - {fileID: 7248445847502379795, guid: 781d45f0836c4dd4e83935a2755626ad, type: 3}
+  - {fileID: 5043752582310271089, guid: ff33094c802db214c950b90e556b1127, type: 3}
+  - {fileID: 3795138901377864601, guid: 3ec8bf0c6ba1b6946b3f5e1f11b95181, type: 3}
 --- !u!4 &1155209050
 Transform:
   m_ObjectHideFlags: 0
