@@ -11,6 +11,7 @@ public class skiGameManager : MonoBehaviour
     void Start()
     {
         Invoke("SpawnHurdle", interval);
+        SpawnCos();
     }
     private void Update()
     {
@@ -37,6 +38,6 @@ public class skiGameManager : MonoBehaviour
             Instantiate(cosmetics[Random.Range(0, cosmetics.Count)], new Vector2(Random.Range(-10f, -5f), -8), Quaternion.identity);
         else
             Instantiate(cosmetics[Random.Range(0, cosmetics.Count)], new Vector2(Random.Range(5f, 10f), -8), Quaternion.identity);
-        Invoke("SpawnHurdle", interval);
+        Invoke("SpawnCos", Random.Range(.5f, 2f));
     }
 }
