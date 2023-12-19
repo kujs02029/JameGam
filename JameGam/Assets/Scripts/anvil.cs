@@ -13,43 +13,7 @@ public class anvil : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && trigger.entered == true)
         {
-            rand = Random.Range(0, 8);
-            if(rand == 0)
-            {
-                
-            }
-            else if(rand == 1)
-            {
-
-            }
-            else if (rand == 2)
-            {
-
-            }
-            else if (rand == 3)
-            {
-
-            }
-            else if (rand == 4)
-            {
-
-            }
-            else if (rand == 5)
-            {
-
-            }
-            else if (rand == 6)
-            {
-
-            }
-            else if (rand == 7)
-            {
-
-            }
-            else if (rand == 8)
-            {
-
-            }
+            SceneManager.LoadScene(Random.Range(1, 10));
         }
     }
 }

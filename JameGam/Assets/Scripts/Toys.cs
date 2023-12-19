@@ -10,7 +10,7 @@ public class Toys : MonoBehaviour
 
     private void Start()
     {
-        if(Random.Range(0, 2) == 1)
+        if(Random.Range(0, 3) == 1)
         {
             bad = true;
         }
@@ -25,6 +25,10 @@ public class Toys : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        if (!bad)
+        {
+            print("DEATH");
+        }
     }
 
 }

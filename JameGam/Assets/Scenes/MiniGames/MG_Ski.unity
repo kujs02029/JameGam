@@ -251,6 +251,7 @@ MonoBehaviour:
   - {fileID: 4333993775268720978, guid: 61ced3f81c96b114592f9e0334dcef08, type: 3}
   - {fileID: 6096461053197694410, guid: d265330134aa48643bb70909196839af, type: 3}
   - {fileID: 6050588675657817196, guid: 3bd00d96aa9ce84488623102155a4dd5, type: 3}
+  - {fileID: 825806881423189845, guid: 8283f09c5d23cd046b1dc2f4f22e8343, type: 3}
   interval: 2
 --- !u!4 &310434331
 Transform:
