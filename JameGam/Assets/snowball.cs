@@ -14,11 +14,13 @@ public class snowball : MonoBehaviour
     {
         
     }
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(Vector2.Distance(target, transform.position));
-        if(Vector2.Distance(target, transform.position) < 1f)
+        if (collision.transform.CompareTag("Finish"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }else if (collision.transform.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

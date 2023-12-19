@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class elfSnowball : MonoBehaviour
 {
+    int left;
+    public int full;
+    bool cans;
     public GameObject snowball;
     // Start is called before the first frame update
     void Start()
     {
-        
+        left = full;
+        cans = true;
     }
 
     // Update is called once per frame
@@ -16,9 +20,24 @@ public class elfSnowball : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            GameObject s = Instantiate(snowball, transform.position + new Vector3(0, 1), Quaternion.identity);
-            s.GetComponent<snowball>().target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            s.GetComponent<Rigidbody2D>().AddForce((Camera.main.ScreenToWorldPoint(Input.mousePosition)-transform.position).normalized * 20, ForceMode2D.Impulse);
+            if (cans)
+            {
+                left--;
+                GameObject s = Instantiate(snowball, transform.position, Quaternion.identity);
+                s.GetComponent<snowball>().target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                s.GetComponent<Rigidbody2D>().AddForce((Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * 40, ForceMode2D.Impulse);
+                if (left == 0)
+                {
+                    cans = false;
+                    Invoke("Reload", 1.5f);
+                }
+            }
         }
+    }
+
+    void Reload()
+    {
+        cans = true;
+        left = full;
     }
 }
