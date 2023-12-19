@@ -4,47 +4,24 @@ using UnityEngine;
 
 public class ElfManager : MonoBehaviour
 {
-    [SerializeField] Sprite[] elves;
+    [SerializeField] GameObject elf;
+    [SerializeField] GameObject elfF;
+    [SerializeField] List<Sprite> elves;
+    [SerializeField] List<Sprite> elfN;
     [SerializeField] ElfPoster poster;
-    int[] nums = new int[20];
-    bool all = false;
-    int rand;
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < 20; i++)
-        {
-            nums[i] = 100;
+        for(int i = 0; i < 5; i++) {
+            elfN.Add(elves[Random.Range(0, 20-i)]);
+            elves.Remove(elfN[i]);
+            GameObject e = Instantiate(elf, new Vector3(Random.Range(-8f, 4), Random.Range(-3f, 3f)), Quaternion.identity);
+            e.GetComponent<SpriteRenderer>().sprite = elfN[i];
+            if (i == 0)
+                e.GetComponent<ElfClickable>().enm = true;
         }
-        nums[0] = poster.num;
-        Debug.Log(poster.num);
-        for(int i = 0; i < 20; i++)
-        {
-            if (!all)
-            {
-                rand = Random.Range(0, 20);
-                for(int j = 0; j < 20; j++)
-                {
-                    if (nums[j] != rand)
-                    {
-                        nums[i] = rand;
-                        Debug.Log(i);
-                    }
-                }
-            }
-            else
-            {
-                break;
-            }
-        }
+
+        elfF.GetComponent<SpriteRenderer>().sprite = elfN[0];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (nums[4] != 100)
-        {
-            all = true;
-        }
-    }
 }
