@@ -9,6 +9,7 @@ public class elfMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float speed;
     Vector2 input;
+    [SerializeField] Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,14 @@ public class elfMovement : MonoBehaviour
 
     private void Update()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
-        input = new Vector2(h, v).normalized;
+        input.y = Input.GetAxisRaw("Vertical");
+        input.x = Input.GetAxisRaw("Horizontal");
+
+        if(input.sqrMagnitude > 0.01f)
+        {
+            animator.SetFloat("Horizontal", input.x);
+            animator.SetFloat("Vertical", input.y);
+        }
+        animator.SetFloat("Speed", input.sqrMagnitude);
     }
 }
