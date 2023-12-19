@@ -26,12 +26,11 @@ public class ReindeerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (v > 0)
+        if(v > 0)
         {
-            rb.MovePosition(transform.position + new Vector3(0, 1) * speed);
+            rb.velocity = (transform.up * speed);
         }
-
-        transform.eulerAngles += new Vector3(0, 0, h * -2);
+        transform.eulerAngles += new Vector3(0, 0, -h);
 
         LimitRot();
     }
