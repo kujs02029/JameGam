@@ -12,7 +12,7 @@ public class foodGameManager : MonoBehaviour
     {
         for(int i = 0; i < 6; i++)
         {
-            Instantiate(foods[Random.Range(0, foods.Count)], new Vector2(Random.Range(-8f, 8f), Random.Range(-4, -1)), Quaternion.identity);
+            Instantiate(foods[Random.Range(0, foods.Count)], new Vector2(Random.Range(-8f, 8f), Random.Range(-3f, -1f)), Quaternion.identity);
         }
         
         for (int i = 0;i < slots.Count; i++)
