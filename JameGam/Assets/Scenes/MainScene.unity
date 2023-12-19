@@ -996,7 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxZrot: 60
   minZrot: -60
-  speed: 0
+  speed: 1
 --- !u!1 &1146609901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6205,7 +6205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxZrot: 60
   minZrot: -60
-  speed: 0
+  speed: 1
 --- !u!1 &1904734661
 GameObject:
   m_ObjectHideFlags: 0
