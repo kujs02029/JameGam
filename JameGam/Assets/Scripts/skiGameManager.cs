@@ -35,9 +35,9 @@ public class skiGameManager : MonoBehaviour
     void SpawnCos()
     {
         if(Random.value > .5f)
-            Instantiate(cosmetics[Random.Range(0, cosmetics.Count+1)], new Vector2(Random.Range(-10f, -5f), -8), Quaternion.identity);
+            Instantiate(cosmetics[Random.Range(0, cosmetics.Count)], new Vector2(Random.Range(-10f, -5f), -8), Quaternion.identity);
         else
-            Instantiate(cosmetics[Random.Range(0, cosmetics.Count+1)], new Vector2(Random.Range(5f, 10f), -8), Quaternion.identity);
+            Instantiate(cosmetics[Random.Range(0, cosmetics.Count)], new Vector2(Random.Range(5f, 10f), -8), Quaternion.identity);
         Invoke("SpawnCos", Random.Range(.5f, 2f));
     }
 }
