@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a6fe6fb274f8947b051f5412267ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elf: {fileID: 8570488228675067694, guid: de4cd6bf2fc365849b14be1ee52b739a, type: 3}
+  elfF: {fileID: 1462174566}
   elves:
   - {fileID: 21300000, guid: a70e69cbdb969ec46ab66b9602e18bbe, type: 3}
   - {fileID: 21300000, guid: 6655f54721f9e0340aee1ee29e81792b, type: 3}
@@ -173,7 +175,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3876772b42c3cca4e8feacf928143b9f, type: 3}
   - {fileID: 21300000, guid: 7af8f3a4d0776844ba3571ce14028f25, type: 3}
   - {fileID: 21300000, guid: 7388864f70069364082f5f357e018577, type: 3}
-  poster: {fileID: 1770732987}
+  elfN: []
+  poster: {fileID: 0}
 --- !u!4 &380921906
 Transform:
   m_ObjectHideFlags: 0
@@ -183,7 +186,7 @@ Transform:
   m_GameObject: {fileID: 380921904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.35, y: 1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -375,7 +378,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1770732986}
   - component: {fileID: 1770732985}
-  - component: {fileID: 1770732987}
   m_Layer: 0
   m_Name: Poster
   m_TagString: Untagged
@@ -451,41 +453,6 @@ Transform:
   - {fileID: 1462174567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1770732987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770732984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edbbd1a1d2d8d0540a03803a79ef8b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elves:
-  - {fileID: 21300000, guid: a70e69cbdb969ec46ab66b9602e18bbe, type: 3}
-  - {fileID: 21300000, guid: 6655f54721f9e0340aee1ee29e81792b, type: 3}
-  - {fileID: 21300000, guid: 787f02d54c2eba94b9907f68340e0559, type: 3}
-  - {fileID: 21300000, guid: 0826ab0b88209b5449103f68b5ef7b1c, type: 3}
-  - {fileID: 21300000, guid: 3e87c1a89f29ad94eb9e0677520438fc, type: 3}
-  - {fileID: 21300000, guid: 970df22c482c0664496bbffd14ed0f9c, type: 3}
-  - {fileID: 21300000, guid: f3b7fd9d3a593ad458e1ec598af9015f, type: 3}
-  - {fileID: 21300000, guid: 9359bc0262de8144fa3cb860cde19b71, type: 3}
-  - {fileID: 21300000, guid: 98720a8ff7680ac4e913b1d53056c2b1, type: 3}
-  - {fileID: 21300000, guid: a7909b4a351ea9b469d6584c0dbb6e64, type: 3}
-  - {fileID: 21300000, guid: 61deb0273e2e13c4a91eb408ab71ce5f, type: 3}
-  - {fileID: 21300000, guid: 703e8f0bb18d2bb44a6256c1aa0ff2ef, type: 3}
-  - {fileID: 21300000, guid: cdded8775b0e7834f910428ee6488fc3, type: 3}
-  - {fileID: 21300000, guid: c72abc87954bb27469fafb7ccfeeed54, type: 3}
-  - {fileID: 21300000, guid: 1b231ce430b43fa4b89d96ab753ad2aa, type: 3}
-  - {fileID: 21300000, guid: 2d914de1603e4ee4b9228762ffd6266b, type: 3}
-  - {fileID: 21300000, guid: c2ed3f6e96a53bc41ba8830aa343f73e, type: 3}
-  - {fileID: 21300000, guid: 3876772b42c3cca4e8feacf928143b9f, type: 3}
-  - {fileID: 21300000, guid: 7af8f3a4d0776844ba3571ce14028f25, type: 3}
-  - {fileID: 21300000, guid: 7388864f70069364082f5f357e018577, type: 3}
-  num: 0
-  renderer: {fileID: 1462174568}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
