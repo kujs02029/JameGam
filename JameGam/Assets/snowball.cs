@@ -10,7 +10,10 @@ public class snowball : MonoBehaviour
     {
         
     }
-
+    private void OnDestroy()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {
@@ -20,4 +23,5 @@ public class snowball : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
