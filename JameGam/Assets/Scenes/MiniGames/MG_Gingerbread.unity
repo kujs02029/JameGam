@@ -160,6 +160,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f96c9e2fa88d7df4288a79ee4de1f21a, type: 3}
   - {fileID: 21300000, guid: c329fdabb5c60244787cf5e9ddb277f7, type: 3}
   - {fileID: 21300000, guid: cd70b8032affc9543a7be4abfa2d52d3, type: 3}
+  rate: 3
 --- !u!4 &272204729
 Transform:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ Transform:
   m_GameObject: {fileID: 272204727}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3663853, y: 3.7953117, z: -0.078913644}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,13 +348,13 @@ GameObject:
   m_Component:
   - component: {fileID: 583744338}
   - component: {fileID: 583744337}
-  - component: {fileID: 583744336}
+  - component: {fileID: 583744339}
   - component: {fileID: 583744335}
   - component: {fileID: 583744334}
   - component: {fileID: 583744333}
   - component: {fileID: 583744332}
   m_Layer: 1
-  m_Name: Elf (1)
+  m_Name: Elf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,20 +467,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &583744336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583744331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c01ea876c96c04cbb6fae159b7d016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  animator: {fileID: 583744333}
 --- !u!212 &583744337
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -547,6 +534,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &583744339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583744331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f327b80ec44f54d4d91584f342431edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  animator: {fileID: 583744333}
 --- !u!1001 &898895986
 PrefabInstance:
   m_ObjectHideFlags: 0

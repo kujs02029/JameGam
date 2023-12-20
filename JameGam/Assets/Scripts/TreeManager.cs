@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreeManager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class TreeManager : MonoBehaviour
     {
         if (health <= 0)
         {
-            print("done");
+            //change scene
         }
     }
 }

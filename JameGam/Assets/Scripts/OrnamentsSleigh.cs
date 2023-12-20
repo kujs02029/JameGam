@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OrnamentsSleigh : MonoBehaviour
 {
@@ -14,5 +15,6 @@ public class OrnamentsSleigh : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         col = false;
+        //change scene
     }
 }
