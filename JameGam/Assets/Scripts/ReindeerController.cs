@@ -11,16 +11,34 @@ public class ReindeerController : MonoBehaviour
     float v;
     Rigidbody2D rb;
     public float speed;
+    bool invincible;
     [SerializeField] SleighNPlayer SP;
+    WheelJoint2D wheel;
     // Start is called before the first frame update
     void Start()
     {
+        wheel = GetComponent<WheelJoint2D>();
         rb  = GetComponent<Rigidbody2D>();  
     }
 
+    void InF()
+    {
+        invincible = false;
+    }
     // Update is called once per frame
     void Update()
     {
+
+      //  print(wheel.jointLinearSpeed);
+        if (wheel.jointLinearSpeed > 7 || wheel.jointLinearSpeed < -7)
+        {
+            if (!invincible)
+            {
+                invincible = true;
+                speed--;
+                Invoke("InF", 1);
+            }
+        }
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
     }
