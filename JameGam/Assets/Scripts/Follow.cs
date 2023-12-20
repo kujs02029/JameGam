@@ -10,12 +10,15 @@ public class Follow : MonoBehaviour
 {
     public float MovementSpeed;
     public Transform PathContainer;
+    public Transform stopRoute;
+    public bool goIn;
 
     public PathMovementStyle MovementStyle;
     public bool LoopThroughPoints;
     public bool StartAtFirstPointOnAwake;
 
     private Transform[] _points;
+
     private Rotate one;
     private Rotate two;
     private int _currentTargetIdx;
@@ -44,6 +47,13 @@ public class Follow : MonoBehaviour
             {
                 _currentTargetIdx = LoopThroughPoints ? 0 : _points.Length - 1;
             }
+        }
+        if (_points[_currentTargetIdx].name == "Choose" && goIn)
+        {
+            _points = new Transform[0];
+            _points = stopRoute.GetComponentsInChildren<Transform>();
+            _currentTargetIdx = 0;
+
         }
         switch (MovementStyle)
         {
