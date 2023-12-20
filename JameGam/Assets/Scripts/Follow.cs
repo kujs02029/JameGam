@@ -51,8 +51,16 @@ public class Follow : MonoBehaviour
         if (_points[_currentTargetIdx].name == "Choose" && goIn)
         {
             _points = new Transform[0];
+            goIn = false;
             _points = stopRoute.GetComponentsInChildren<Transform>();
             _currentTargetIdx = 0;
+
+        }
+        if (_points[_currentTargetIdx].name == "Back")
+        {
+            _points = new Transform[0];
+            _points = PathContainer.GetComponentsInChildren<Transform>();
+            _currentTargetIdx = 12;
 
         }
         switch (MovementStyle)
