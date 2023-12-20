@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1095696795177704836}
   - component: {fileID: 2393872117402062779}
   - component: {fileID: -1206802266063992974}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: GingerbreadMan
   m_TagString: Finish
   m_Icon: {fileID: 0}
