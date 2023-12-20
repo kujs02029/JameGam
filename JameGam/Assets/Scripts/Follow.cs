@@ -16,11 +16,14 @@ public class Follow : MonoBehaviour
     public bool StartAtFirstPointOnAwake;
 
     private Transform[] _points;
-
+    private Rotate one;
+    private Rotate two;
     private int _currentTargetIdx;
 
     private void Awake()
     {
+        one = transform.GetChild(0).GetChild(0).GetComponent<Rotate>();
+        two = transform.GetChild(0).GetChild(1).GetComponent<Rotate>();
         _points = PathContainer.GetComponentsInChildren<Transform>();
         if (StartAtFirstPointOnAwake)
         {
@@ -30,9 +33,11 @@ public class Follow : MonoBehaviour
 
     private void Update()
     {
+        one.player = _points[_currentTargetIdx].gameObject;
+        two.player = _points[_currentTargetIdx].gameObject;
         if (_points == null || _points.Length == 0) return;
         var distance = Vector3.Distance(transform.position, _points[_currentTargetIdx].position);
-        if (Mathf.Abs(distance) < 0.1f)
+        if (Mathf.Abs(distance) < 6.75f)
         {
             _currentTargetIdx++;
             if (_currentTargetIdx >= _points.Length)
