@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ElfClickable : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class ElfClickable : MonoBehaviour
     {
         if (enm)
         {
-            print("You did it stupid");
+            //Change scene;
         }
         else
             print("HA STUPID");
