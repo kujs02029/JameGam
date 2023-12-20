@@ -11,6 +11,7 @@ public class ReindeerController : MonoBehaviour
     float v;
     Rigidbody2D rb;
     public float speed;
+    [SerializeField] SleighNPlayer SP;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +27,11 @@ public class ReindeerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(v > 0)
+        if(v > 0 && SP.isOnSleigh == true)
         {
             rb.velocity = (transform.up * speed);
-        }if(v < 0)
+        }
+        if(v < 0 && SP.isOnSleigh == true)
         {
             rb.velocity = Vector2.zero;
         }

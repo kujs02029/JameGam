@@ -10,6 +10,7 @@ public class elfMovement : MonoBehaviour
     public float speed;
     Vector2 input;
     [SerializeField] Animator animator;
+    [SerializeField] SleighNPlayer SP;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,10 @@ public class elfMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
+        if (SP.isOnSleigh == false)
+        {
+            rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
+        }
     }
 
     private void Update()
