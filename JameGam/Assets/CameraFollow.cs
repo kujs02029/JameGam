@@ -15,6 +15,10 @@ public class CameraFollow : MonoBehaviour
         {
             transform.eulerAngles = target.eulerAngles;
         }
+        else
+        {
+            transform.eulerAngles = Vector3.zero;
+        }
         Vector3 newPos = new Vector3(target.position.x, target.position.y, - 10f);
         transform.position = Vector3.Slerp(transform.position, newPos, speed * Time.fixedDeltaTime);
     }
