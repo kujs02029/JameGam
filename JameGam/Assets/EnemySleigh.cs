@@ -18,7 +18,7 @@ public class EnemySleigh : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         follow.MovementSpeed = (health / maxHealth) * maxSpeed > minSpeed ? (health / maxHealth) * maxSpeed : minSpeed;
         if(health <= maxHealth / safe)
