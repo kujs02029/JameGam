@@ -1430,7 +1430,7 @@ GameObject:
   - component: {fileID: 233288196}
   - component: {fileID: 233288197}
   m_Layer: 0
-  m_Name: Stop
+  m_Name: Stop2
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3660,7 +3660,7 @@ GameObject:
   - component: {fileID: 552921334}
   - component: {fileID: 552921335}
   m_Layer: 0
-  m_Name: Stop
+  m_Name: Stop3
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -6855,7 +6855,7 @@ GameObject:
   - component: {fileID: 969877326}
   - component: {fileID: 969877327}
   m_Layer: 0
-  m_Name: Stop
+  m_Name: Stop4
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -7063,7 +7063,7 @@ MonoBehaviour:
   PathContainer: {fileID: 1463568328}
   stopRoute: {fileID: 731954959}
   goIn: 1
-  myStop: {fileID: 1105447094}
+  myStop: {fileID: 969877326}
   accuracy: 0
   MovementStyle: 0
   LoopThroughPoints: 1
@@ -7720,7 +7720,7 @@ GameObject:
   - component: {fileID: 1105447094}
   - component: {fileID: 1105447095}
   m_Layer: 0
-  m_Name: Stop
+  m_Name: Stop1
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
