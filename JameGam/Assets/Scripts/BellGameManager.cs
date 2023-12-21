@@ -11,6 +11,7 @@ public class BellGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         for(int i = 0; i < 8; i++)
         {
             org.Add(Random.Range(1, 5));
@@ -20,20 +21,21 @@ public class BellGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool good = false;
         if(clicked.Count == org.Count)
         {
-            for(int i = 0; i < clicked.Count; i++)
+            bool good = false;
+            for (int i = 0; i < clicked.Count; i++)
             {
                 if (clicked[i] == org[i])
                 {
                     good = true;
                 }
             }
-        }
-        if (good)
-        {
-            //Change Scene
+            if (!good)
+                PlayerPrefs.SetFloat("S", 0);
+            else
+                PlayerPrefs.SetFloat("S", 1);
+            SceneManager.LoadScene(1);
         }
     }
 }

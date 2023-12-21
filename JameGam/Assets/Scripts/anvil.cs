@@ -13,7 +13,7 @@ public class anvil : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && trigger.entered == true)
         {
-            SceneManager.LoadScene(Random.Range(1, 10));
+            SceneManager.LoadScene(Random.Range(2, 11));
         }
     }
 }

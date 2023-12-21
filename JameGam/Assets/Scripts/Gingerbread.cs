@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gingerbread : MonoBehaviour
 {
@@ -22,7 +23,9 @@ public class Gingerbread : MonoBehaviour
     {
         if(collision.gameObject == player)
         {
-            print("DEATH");
+            PlayerPrefs.SetFloat("S", 0);
+
+            SceneManager.LoadScene(1);
         }
     }
 }

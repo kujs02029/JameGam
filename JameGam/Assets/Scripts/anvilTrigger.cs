@@ -8,7 +8,7 @@ public class anvilTrigger : MonoBehaviour
     public bool entered = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<elfMovement>())
+        if (collision.gameObject.GetComponent<elfMovement>() || collision.gameObject.GetComponent<elfGingerMovement>())
         {
             print("Collided");
             press.SetActive(true);

@@ -10,9 +10,11 @@ public class ElfClickable : MonoBehaviour
     {
         if (enm)
         {
-            //Change scene;
+            PlayerPrefs.SetFloat("S", 1);
         }
         else
-            print("HA STUPID");
+            PlayerPrefs.SetFloat("S", 0);
+
+        SceneManager.LoadScene(1);
     }
 }

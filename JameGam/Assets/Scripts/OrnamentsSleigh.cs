@@ -5,16 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class OrnamentsSleigh : MonoBehaviour
 {
-    bool col;
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        col = true;
-    }
 
-
-    private void OnTriggerExit2D(Collider2D collision)
+    private void Update()
     {
-        col = false;
-        //change scene
+        if (!FindObjectOfType<Ornaments>())
+        {
+            PlayerPrefs.SetFloat("S", 1);
+            SceneManager.LoadScene(1);
+        }
     }
 }

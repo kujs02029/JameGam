@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class skiHurdle : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class skiHurdle : MonoBehaviour
     {
         if (!touch && !cos)
         {
-            print("DEATH");
+            PlayerPrefs.SetFloat("S", 0);
+            SceneManager.LoadScene(1);
         }
     }
     private void Update()

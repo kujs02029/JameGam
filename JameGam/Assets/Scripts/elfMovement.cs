@@ -8,6 +8,7 @@ public class elfMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed;
+    public int num;
     Vector2 input;
     [SerializeField] Animator animator;
     [SerializeField] SleighNPlayer SP;

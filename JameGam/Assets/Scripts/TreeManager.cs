@@ -7,7 +7,10 @@ public class TreeManager : MonoBehaviour
 {
     [SerializeField] bar br;
     public int health = 100;
-
+    int c = 0;
+    public GameObject s;
+    public GameObject s1;
+    public GameObject s2;
     public void damageTree()
     {
         print(health);
@@ -27,6 +30,7 @@ public class TreeManager : MonoBehaviour
         {
             health -= Random.Range(5, 20);
         }
+        c++;
         Invoke("stopI", 1);
     }
 
@@ -36,9 +40,28 @@ public class TreeManager : MonoBehaviour
     }
     private void Update()
     {
+        if(c == 1)
+        {
+            s.GetComponent<SpriteRenderer>().color = Color.black;
+        }if( c== 2)
+        {
+            s1.GetComponent<SpriteRenderer>().color = Color.black;
+
+        }
+        if (c == 3)
+        {
+            s2.GetComponent<SpriteRenderer>().color = Color.black;
+
+        }
         if (health <= 0)
         {
-            //change scene
+            SceneManager.LoadScene(1);
+            PlayerPrefs.SetFloat("S", 1);
+        }
+        if (c == 4)
+        {
+            SceneManager.LoadScene(1);
+            PlayerPrefs.SetFloat("S", 0);
         }
     }
 }

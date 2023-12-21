@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 3de35a8740f754e439bf5df97195399d
   - enabled: 1
+    path: Assets/Scenes/RacingStop.unity
+    guid: 517977fcbf07c5f4e8bc856d19e74290
+  - enabled: 1
     path: Assets/Scenes/MiniGames/MG_Bells.unity
     guid: 3063a9bb73a48f2429e7da3e672744ce
   - enabled: 1

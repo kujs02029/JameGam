@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class foodGameManager : MonoBehaviour
 {
@@ -22,6 +23,16 @@ public class foodGameManager : MonoBehaviour
             slots[i].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites[a];
             sprites.RemoveAt(a);
             types.RemoveAt(a);
+        }
+    }
+
+    private void Update()
+    {
+        if (!FindObjectOfType<Food>())
+        {
+
+            PlayerPrefs.SetFloat("S",1);
+            SceneManager.LoadScene(1);
         }
     }
 }
