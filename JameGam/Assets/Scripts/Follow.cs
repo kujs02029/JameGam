@@ -25,6 +25,7 @@ public class Follow : MonoBehaviour
     private int _currentTargetIdx;
     private bool inR;
     private bool stop;
+    public int lookIdx;
     private void Awake()
     {
         one = transform.GetChild(0).GetChild(0).GetComponent<Rotate>();
@@ -38,8 +39,8 @@ public class Follow : MonoBehaviour
 
     private void Update()
     {
-        one.player = _points[_currentTargetIdx].gameObject;
-        two.player = _points[_currentTargetIdx].gameObject;
+        one.player = _points[lookIdx].gameObject;
+        two.player = _points[lookIdx].gameObject;
         if (_points == null || _points.Length == 0) return;
         var distance = Vector3.Distance(transform.position, _points[_currentTargetIdx].position);
         if (inR)
@@ -51,7 +52,7 @@ public class Follow : MonoBehaviour
                 if (_points[_currentTargetIdx] == myStop)
                 {
                     print(3);
-                    if (distance < .5f)
+                    if (distance < 3f)
                     {
                         print("Test");
                         stop = true;
@@ -67,9 +68,18 @@ public class Follow : MonoBehaviour
                 }
             }
         }
-        if (Mathf.Abs(distance) < 6.75f && !stop && _points[_currentTargetIdx] != myStop)
+        if (_currentTargetIdx == lookIdx && Mathf.Abs(distance) < 7 && !stop && _points[_currentTargetIdx] != myStop)
+        {
+            lookIdx++;
+            if (lookIdx >= _points.Length)
+            {
+                lookIdx = LoopThroughPoints ? 0 : _points.Length - 1;
+            }
+        }
+        if (Mathf.Abs(distance) < 3 && !stop && _points[_currentTargetIdx] != myStop)
         {
             _currentTargetIdx++;
+
             if (_currentTargetIdx >= _points.Length)
             {
                 _currentTargetIdx = LoopThroughPoints ? 0 : _points.Length - 1;
@@ -83,6 +93,7 @@ public class Follow : MonoBehaviour
             goIn = false;
             _points = stopRoute.GetComponentsInChildren<Transform>();
             _currentTargetIdx = 0;
+            lookIdx = 0;
             pos = _points[_currentTargetIdx].position + new Vector3(Random.Range(-accuracy, accuracy), Random.Range(-accuracy, accuracy));
 
         }
@@ -92,6 +103,7 @@ public class Follow : MonoBehaviour
             _points = new Transform[0];
             _points = PathContainer.GetComponentsInChildren<Transform>();
             _currentTargetIdx = 12;
+            lookIdx = 12;
             pos = _points[_currentTargetIdx].position + new Vector3(Random.Range(-accuracy, accuracy), Random.Range(-accuracy, accuracy));
 
         }
@@ -141,5 +153,8 @@ public class Follow : MonoBehaviour
     void startAgain()
     {
         stop = false;
+        pos = _points[_currentTargetIdx].position + new Vector3(Random.Range(-accuracy, accuracy), Random.Range(-accuracy, accuracy));
+        print((pos,transform.position));
+
     }
 }
