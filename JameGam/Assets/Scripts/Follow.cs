@@ -35,6 +35,7 @@ public class Follow : MonoBehaviour
         {
             transform.position = _points[0].position;
         }
+        pos = _points[_currentTargetIdx].position + new Vector3(Random.Range(-accuracy, accuracy), Random.Range(-accuracy, accuracy));
     }
 
     private void Update()
@@ -42,19 +43,16 @@ public class Follow : MonoBehaviour
         one.player = _points[lookIdx].gameObject;
         two.player = _points[lookIdx].gameObject;
         if (_points == null || _points.Length == 0) return;
-        var distance = Vector3.Distance(transform.position, _points[_currentTargetIdx].position);
+        var distance = Vector3.Distance(transform.position, pos);
         if (inR)
         {
-            print(1);
             if (_points[_currentTargetIdx].name == "Stop")
             {
-                print(2);
                 if (_points[_currentTargetIdx] == myStop)
                 {
-                    print(3);
                     if (distance < 3f)
                     {
-                        print("Test");
+                        GetComponent<EnemySleigh>().health = GetComponent<EnemySleigh>().maxHealth;
                         stop = true;
                         Invoke("startAgain", 2);
                         _currentTargetIdx++;
@@ -76,7 +74,7 @@ public class Follow : MonoBehaviour
                 lookIdx = LoopThroughPoints ? 0 : _points.Length - 1;
             }
         }
-        if (Mathf.Abs(distance) < 3 && !stop && _points[_currentTargetIdx] != myStop)
+        if (Mathf.Abs(distance) < 1.5f && !stop && _points[_currentTargetIdx] != myStop)
         {
             _currentTargetIdx++;
 
