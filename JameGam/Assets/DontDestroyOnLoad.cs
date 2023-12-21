@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,6 @@ public class DontDestroyOnLoad : MonoBehaviour
     {
         DontDestroyOnLoad(transform.gameObject);
 
-        print("ASd");
-
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -25,7 +24,14 @@ public class DontDestroyOnLoad : MonoBehaviour
             if(scene.buildIndex == 0)
             {
                 gameObject.SetActive(true);
-                Destroy(FindObjectOfType<DontDestroyOnLoad>());
+                DontDestroyOnLoad[] dontDestroyOnLoads = new DontDestroyOnLoad[0];
+                dontDestroyOnLoads = FindObjectsOfType<DontDestroyOnLoad>();
+                for (int i = 0; i < dontDestroyOnLoads.Length; i++){
+                    if (dontDestroyOnLoads[i] != this)
+                    {
+                        Destroy(dontDestroyOnLoads[i].gameObject);
+                    }
+                }
             }
             else
             {
