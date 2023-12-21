@@ -7624,6 +7624,7 @@ MonoBehaviour:
   MovementStyle: 0
   LoopThroughPoints: 1
   StartAtFirstPointOnAwake: 1
+  lookIdx: 0
 --- !u!114 &979311356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8076,6 +8077,7 @@ MonoBehaviour:
   MovementStyle: 0
   LoopThroughPoints: 1
   StartAtFirstPointOnAwake: 1
+  lookIdx: 0
 --- !u!4 &1056800697
 Transform:
   m_ObjectHideFlags: 0
@@ -9835,6 +9837,7 @@ MonoBehaviour:
   MovementStyle: 0
   LoopThroughPoints: 1
   StartAtFirstPointOnAwake: 1
+  lookIdx: 0
 --- !u!4 &1323387979
 Transform:
   m_ObjectHideFlags: 0
@@ -16242,6 +16245,7 @@ MonoBehaviour:
   MovementStyle: 0
   LoopThroughPoints: 1
   StartAtFirstPointOnAwake: 1
+  lookIdx: 0
 --- !u!4 &1765578363
 Transform:
   m_ObjectHideFlags: 0
@@ -16382,6 +16386,7 @@ MonoBehaviour:
   MovementStyle: 0
   LoopThroughPoints: 1
   StartAtFirstPointOnAwake: 0
+  lookIdx: 0
 --- !u!212 &1770194092
 SpriteRenderer:
   m_ObjectHideFlags: 0
