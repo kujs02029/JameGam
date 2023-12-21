@@ -5,14 +5,18 @@ using UnityEngine;
 public class snowball : MonoBehaviour
 {
     public Vector2 target;
+    float timer;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
-    }
-    private void OnDestroy()
-    {
-        
+        if (timer >= 10)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            timer += Time.fixedDeltaTime;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
