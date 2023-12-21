@@ -74,8 +74,9 @@ public class Follow : MonoBehaviour
                 lookIdx = LoopThroughPoints ? 0 : _points.Length - 1;
             }
         }
-        if (Mathf.Abs(distance) < 1.5f && !stop && _points[_currentTargetIdx] != myStop)
+        if (Mathf.Abs(distance) < 0.01f && !stop && _points[_currentTargetIdx] != myStop)
         {
+            GetComponent<EnemySleigh>().health-=.5f;
             _currentTargetIdx++;
 
             if (_currentTargetIdx >= _points.Length)
