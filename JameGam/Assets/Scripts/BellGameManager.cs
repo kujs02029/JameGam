@@ -35,7 +35,7 @@ public class BellGameManager : MonoBehaviour
                 PlayerPrefs.SetFloat("S", 0);
             else
                 PlayerPrefs.SetFloat("S", 1);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }

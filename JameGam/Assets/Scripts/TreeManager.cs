@@ -55,12 +55,14 @@ public class TreeManager : MonoBehaviour
         }
         if (health <= 0)
         {
-            SceneManager.LoadScene(1);
+            
+
+
             PlayerPrefs.SetFloat("S", 1);
         }
         if (c == 4)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);;
             PlayerPrefs.SetFloat("S", 0);
         }
     }

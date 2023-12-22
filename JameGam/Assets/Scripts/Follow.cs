@@ -48,16 +48,13 @@ public class Follow : MonoBehaviour
         {
             if (_points[_currentTargetIdx].name == "Stop")
             {
-                print("Nic1e");
                 if (_points[_currentTargetIdx] == myStop)
                 {
-                    print("Ni2ce");
                     if (distance < 3f)
                     {
                         GetComponent<EnemySleigh>().health = GetComponent<EnemySleigh>().maxHealth;
                         stop = true;
                         Invoke("startAgain", 2);
-                        print("Nice");
                         _currentTargetIdx++;
                         lookIdx++;
                         pos = _points[_currentTargetIdx].position + new Vector3(Random.Range(-accuracy, accuracy), Random.Range(-accuracy, accuracy));
