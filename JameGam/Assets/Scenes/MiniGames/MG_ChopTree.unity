@@ -285,8 +285,8 @@ Transform:
   m_GameObject: {fileID: 36012648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1243572, y: 3.010975, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7, y: 3.7, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 49166994}
   - component: {fileID: 49166993}
   m_Layer: 0
-  m_Name: Santa1 (3)
+  m_Name: Santa3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369,8 +369,8 @@ Transform:
   m_GameObject: {fileID: 49166992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.124357, y: 3.010975, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7, y: -1.225, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 1789490292}
   - component: {fileID: 1789490291}
   m_Layer: 0
-  m_Name: Santa1 (2)
+  m_Name: Santa2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -995,8 +995,8 @@ Transform:
   m_GameObject: {fileID: 1789490290}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.124357, y: 3.010975, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7, y: 1.225, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 1934268527}
   - component: {fileID: 1934268526}
   m_Layer: 0
-  m_Name: Santa1 (1)
+  m_Name: Santa4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1079,8 +1079,8 @@ Transform:
   m_GameObject: {fileID: 1934268525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.124357, y: 3.010975, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7, y: -3.7, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1097,6 +1097,6 @@ SceneRoots:
   - {fileID: 23072238}
   - {fileID: 488020741}
   - {fileID: 36012650}
-  - {fileID: 1934268527}
-  - {fileID: 49166994}
   - {fileID: 1789490292}
+  - {fileID: 49166994}
+  - {fileID: 1934268527}
