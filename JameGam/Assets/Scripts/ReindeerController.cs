@@ -20,7 +20,15 @@ public class ReindeerController : MonoBehaviour
         wheel = GetComponent<WheelJoint2D>();
         rb  = GetComponent<Rigidbody2D>();  
     }
+    void Minus()
+    {
+        if (speed > 15)
+        {
+            speed--;
+        }
+        Invoke("Minus", .8f);
 
+    }
     void InF()
     {
         invincible = false;

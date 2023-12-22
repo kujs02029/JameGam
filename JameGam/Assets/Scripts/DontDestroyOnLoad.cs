@@ -23,6 +23,10 @@ public class DontDestroyOnLoad : MonoBehaviour
         {
             if(scene.buildIndex == 1)
             {
+                if(PlayerPrefs.GetFloat("S") == 1)
+                {
+
+                }
                 gameObject.SetActive(true);
                 DontDestroyOnLoad[] dontDestroyOnLoads = new DontDestroyOnLoad[0];
                 dontDestroyOnLoads = FindObjectsOfType<DontDestroyOnLoad>();

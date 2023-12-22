@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ec4a30bbb5325ef4c85e74959ff48813
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 3de35a8740f754e439bf5df97195399d
   - enabled: 1
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGames/MG_Ski.unity
     guid: 4b1f85b03d3b81749905b213dd74221c
-  - enabled: 1
-    path: Assets/Scenes/MiniGames/MG_Snowball.unity
-    guid: be9a29937efec394783a8559d3b2034b
   - enabled: 1
     path: Assets/Scenes/MiniGames/MG_Toys.unity
     guid: 2bf9dc8925ca0484cae19ce0f2b60bac

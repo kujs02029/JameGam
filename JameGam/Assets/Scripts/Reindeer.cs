@@ -6,6 +6,7 @@ public class Reindeer : MonoBehaviour
 {
     private WheelJoint2D wheel;
     private bool inv;
+    public SpriteRenderer roof;
     private void Start()
     {
         wheel = GetComponent<WheelJoint2D>();

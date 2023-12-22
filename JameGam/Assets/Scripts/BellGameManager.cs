@@ -12,7 +12,7 @@ public class BellGameManager : MonoBehaviour
     void Start()
     {
         
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < 5; i++)
         {
             org.Add(Random.Range(1, 5));
         }
