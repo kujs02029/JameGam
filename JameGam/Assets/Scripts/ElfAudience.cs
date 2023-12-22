@@ -9,6 +9,7 @@ public class ElfAudience : MonoBehaviour
     public float rotationModifier;
     private void Start()
     {
+        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         EnemySleigh[] sl = FindObjectsOfType<EnemySleigh>();
         player = sl[Random.Range(0, sl.Length)].gameObject;
     }
