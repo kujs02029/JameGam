@@ -28,11 +28,11 @@ public class ReindeerController : MonoBehaviour
     }
     void Minus()
     {
-        if (speed > 5)
+        if (speed >= 5)
         {
-            speed-=.25f;
+            speed-=.15f;
         }
-        Invoke("Minus", .8f);
+        Invoke("Minus", 1f);
 
     }
     void InF()
