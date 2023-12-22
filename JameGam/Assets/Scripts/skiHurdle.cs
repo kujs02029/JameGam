@@ -37,16 +37,10 @@ public class skiHurdle : MonoBehaviour
     {
         transform.position += new Vector3(0, speed) * Time.fixedDeltaTime;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        print("ad");
-    }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        print("asd");
         if (collision.CompareTag("Player"))
         {
-            print("Sui");
             touch = true;
         }
     }

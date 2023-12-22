@@ -27,7 +27,8 @@ public class Toys : MonoBehaviour
         Destroy(gameObject);
         if (!bad)
         {
-            print("DEATH");
+            PlayerPrefs.SetFloat("S", 0);
+            FindObjectOfType<CanvasAnim>().Fail();
         }
     }
 

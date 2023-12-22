@@ -6,7 +6,7 @@ public class Stop : MonoBehaviour
 {
     public List<Follow> follows;
     public List<ReindeerController> rein;
-
+    public Animator image;
     private void Start()
     {
         foreach (var follow in follows)
@@ -31,5 +31,6 @@ public class Stop : MonoBehaviour
         {
             reindeer.enabled = true;
         }
+        image.gameObject.SetActive(false);
     }
 }
