@@ -3313,6 +3313,7 @@ Transform:
   - {fileID: 1463568328}
   - {fileID: 76884355}
   - {fileID: 987313306}
+  - {fileID: 1340439226}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725656189
@@ -4864,7 +4865,7 @@ MonoBehaviour:
   maxHealth: 50
   maxSpeed: 25
   minSpeed: 20
-  safe: 1.2
+  safe: 1.5
   circle: {fileID: 703172469}
   colors: []
   reindeers: []
@@ -5178,7 +5179,7 @@ MonoBehaviour:
   maxHealth: 50
   maxSpeed: 25
   minSpeed: 20
-  safe: 1.2
+  safe: 1.5
   circle: {fileID: 1783952824}
   colors: []
   reindeers: []
@@ -6338,8 +6339,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340439225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.4, y: -13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6351,7 +6352,7 @@ Transform:
   - {fileID: 1663615824}
   - {fileID: 1328884936}
   - {fileID: 725656190}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 710898654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1340439227
 MonoBehaviour:
@@ -12323,7 +12324,7 @@ MonoBehaviour:
   maxHealth: 50
   maxSpeed: 25
   minSpeed: 20
-  safe: 1.2
+  safe: 1.5
   circle: {fileID: 620826576}
   colors: []
   reindeers: []
@@ -13598,7 +13599,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 40
+  orthographic size: 70
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -14223,4 +14224,3 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 710898654}
-  - {fileID: 1340439226}
