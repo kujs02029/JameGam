@@ -16,19 +16,23 @@ public class TreeManager : MonoBehaviour
         print(health);
         if(br.gameObject.transform.position.y > 0)
         {
-            health -= Random.Range(40, 60);
+            int damage = Random.Range(40, 60);
+            health -= damage;
         }
         else if(br.gameObject.transform.position.y > 1)
         {
-            health -= Random.Range(25, 45);
+            int damage = Random.Range(25, 45);
+            health -= damage;
         }
         else if (br.gameObject.transform.position.y > 1)
         {
-            health -= Random.Range(15, 35);
+            int damage = Random.Range(15, 35);
+            health -= damage;
         }
         else if (br.gameObject.transform.position.y > 1)
         {
-            health -= Random.Range(5, 20);
+            int damage = Random.Range(5, 20);
+            health -= damage;
         }
         c++;
         Invoke("stopI", 1);
