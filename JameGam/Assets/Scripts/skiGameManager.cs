@@ -32,6 +32,7 @@ public class skiGameManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("S", 1);
 
+            print((hurdles, c));
             SceneManager.LoadScene(1);
         }
     }

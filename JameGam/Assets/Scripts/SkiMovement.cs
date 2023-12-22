@@ -22,4 +22,9 @@ public class SkiMovement : MonoBehaviour
         }
         v = Input.GetAxis("Horizontal");
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.GetComponentInParent<skiHurdle>().touch = true;
+    }
 }
