@@ -9,7 +9,7 @@ public class ChangeScene : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<elfGingerMovement>())
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);;
         }
     }
 }

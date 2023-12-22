@@ -15,6 +15,6 @@ public class ElfClickable : MonoBehaviour
         else
             PlayerPrefs.SetFloat("S", 0);
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);;
     }
 }
