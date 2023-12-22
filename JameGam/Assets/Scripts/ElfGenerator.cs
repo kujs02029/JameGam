@@ -9,13 +9,14 @@ public class ElfGenerator : MonoBehaviour
     public GameObject elf;
     public int count;
     [SerializeField] List<BoxCollider2D> bc;
-
+    private Transform parent;
     Vector2 cubeSize;
     Vector2 cubeCenter;
 
 
     private void Awake()
     {
+        parent = transform.parent;
     }
 
 
@@ -43,6 +44,7 @@ public class ElfGenerator : MonoBehaviour
             cubeSize.y = cubeTrans.localScale.y * bc[a].size.y;
             GameObject b = Instantiate(elf, GetRandomPosition(), Quaternion.identity);
             b.GetComponent<SpriteRenderer>().sprite = elfTop[Random.Range(0, elfTop.Count)];
+            b.transform.SetParent(parent);
         }
     }
 
