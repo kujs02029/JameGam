@@ -214,7 +214,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 432456386}
@@ -259,7 +259,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.8000001, g: 0.16078432, b: 0.26666668, a: 1}
   m_FlipX: 0
@@ -1753,7 +1753,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: ea34782d90935314fb6e2b751a4b142c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1796,6 +1796,7 @@ GameObject:
   - component: {fileID: 443456295}
   - component: {fileID: 443456294}
   - component: {fileID: 443456293}
+  - component: {fileID: 443456296}
   m_Layer: 0
   m_Name: Sleigh1
   m_TagString: Untagged
@@ -1932,7 +1933,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: ea34782d90935314fb6e2b751a4b142c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1944,6 +1945,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &443456296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443456291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4099f147a001c8341826a8d994ecdd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle: {fileID: 0}
+  colors: []
+  Rsprites: []
+  sleighs: []
 --- !u!1 &450582142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,7 +2491,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 443456292}
@@ -2519,7 +2536,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0.12321901, b: 1, a: 1}
   m_FlipX: 0
@@ -3045,7 +3062,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1902975858}
@@ -3090,7 +3107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 1, b: 0.10700154, a: 1}
   m_FlipX: 0
@@ -3258,6 +3275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710898654}
   - component: {fileID: 710898653}
+  - component: {fileID: 710898655}
   m_Layer: 0
   m_Name: Racingscene
   m_TagString: Untagged
@@ -3316,6 +3334,42 @@ Transform:
   - {fileID: 1340439226}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &710898655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710898652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4099f147a001c8341826a8d994ecdd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle: {fileID: 0}
+  colors:
+  - {r: 0.8000001, g: 0.16078432, b: 0.26666668, a: 1}
+  - {r: 0.2901961, g: 0.4666667, b: 0.78823537, a: 1}
+  - {r: 0.3137255, g: 0.4156863, b: 0.2509804, a: 1}
+  - {r: 1, g: 0.97647065, b: 0.6313726, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.9490197, g: 0.8078432, b: 0.61960787, a: 1}
+  Rsprites:
+  - {fileID: 21300000, guid: 2370a7276d1194f46ad423eab910db92, type: 3}
+  - {fileID: 21300000, guid: c11341d7248f9dc47a11c83bb2d5925a, type: 3}
+  - {fileID: 21300000, guid: 5d890bc1dd82d6a4da09e80bb270c643, type: 3}
+  - {fileID: 21300000, guid: 7aa529d03f477f54ab33c10894ba1f06, type: 3}
+  - {fileID: 21300000, guid: 3478fa5cb8ee3ac44bd86dd1b421b07e, type: 3}
+  - {fileID: 21300000, guid: ff0a54d94b1945d4bb9728f75d4c70c0, type: 3}
+  - {fileID: 21300000, guid: 44a07c00bdaffd747979f23569da2ada, type: 3}
+  - {fileID: 21300000, guid: 4e665b25f19a739478e25ab3812bca5f, type: 3}
+  sleighs:
+  - {fileID: 21300000, guid: ea34782d90935314fb6e2b751a4b142c, type: 3}
+  - {fileID: 21300000, guid: a6a7cdb10c36fc94e8ab70300dc9c141, type: 3}
+  - {fileID: 21300000, guid: 9ad114e8b7175b94f872690a717d9d80, type: 3}
+  - {fileID: 21300000, guid: dc58bad03e4dc6349b63bc27f7344dda, type: 3}
+  - {fileID: 21300000, guid: 540df2e7bf83ed94b9cb5c00b91d2705, type: 3}
+  - {fileID: 21300000, guid: 887bbdc2b6ca27346b5eeb4ffd3a9ada, type: 3}
 --- !u!1 &725656189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,11 +4920,6 @@ MonoBehaviour:
   maxSpeed: 25
   minSpeed: 20
   safe: 1.5
-  circle: {fileID: 703172469}
-  colors: []
-  reindeers: []
-  Rsprites: []
-  sleighs: []
 --- !u!1 &987313305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5102,7 +5151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: ea34782d90935314fb6e2b751a4b142c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5180,11 +5229,6 @@ MonoBehaviour:
   maxSpeed: 25
   minSpeed: 20
   safe: 1.5
-  circle: {fileID: 1783952824}
-  colors: []
-  reindeers: []
-  Rsprites: []
-  sleighs: []
 --- !u!114 &1056800696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12325,11 +12369,6 @@ MonoBehaviour:
   maxSpeed: 25
   minSpeed: 20
   safe: 1.5
-  circle: {fileID: 620826576}
-  colors: []
-  reindeers: []
-  Rsprites: []
-  sleighs: []
 --- !u!114 &1765578362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12458,7 +12497,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1005014081}
@@ -12503,7 +12542,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0.1395998, a: 1}
   m_FlipX: 0
@@ -13208,7 +13247,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: ea34782d90935314fb6e2b751a4b142c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
