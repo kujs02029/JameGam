@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReindeerController : MonoBehaviour
 {
@@ -14,12 +15,16 @@ public class ReindeerController : MonoBehaviour
     bool invincible;
     [SerializeField] SleighNPlayer SP;
     WheelJoint2D wheel;
+    [SerializeField] Image fill;
+    float maxspeed;
     // Start is called before the first frame update
     void Start()
     {
         Minus();
         wheel = GetComponent<WheelJoint2D>();
-        rb  = GetComponent<Rigidbody2D>();  
+        rb  = GetComponent<Rigidbody2D>();
+        fill.fillAmount = 1;
+        maxspeed = speed;
     }
     void Minus()
     {
@@ -37,7 +42,7 @@ public class ReindeerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        fill.fillAmount = speed / maxspeed;
       //  print(wheel.jointLinearSpeed);
         if (wheel.jointLinearSpeed > 7 || wheel.jointLinearSpeed < -7)
         {
