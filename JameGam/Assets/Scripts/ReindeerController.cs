@@ -17,6 +17,7 @@ public class ReindeerController : MonoBehaviour
     WheelJoint2D wheel;
     [SerializeField] Image fill;
     float maxspeed;
+    float fillspeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +25,14 @@ public class ReindeerController : MonoBehaviour
         wheel = GetComponent<WheelJoint2D>();
         rb  = GetComponent<Rigidbody2D>();
         fill.fillAmount = 1;
-        maxspeed = speed;
+        fillspeed = speed - 5;
+        maxspeed = fillspeed;
     }
     void Minus()
     {
         if (speed >= 5)
         {
-            speed-=.15f;
+            speed-=.2f;
         }
         Invoke("Minus", 1f);
 
@@ -42,7 +44,8 @@ public class ReindeerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fill.fillAmount = speed / maxspeed;
+        fillspeed = speed - 5;
+        fill.fillAmount = fillspeed / maxspeed;
       //  print(wheel.jointLinearSpeed);
         if (wheel.jointLinearSpeed > 7 || wheel.jointLinearSpeed < -7)
         {

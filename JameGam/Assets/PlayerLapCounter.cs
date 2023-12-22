@@ -5,11 +5,13 @@ using TMPro;
 
 public class PlayerLapCounter : MonoBehaviour
 {
-    int lap = 1;
+    int lap = 0;
     public int totalLap;
     public bool touched;
     public bool touched1;
     [SerializeField] TextMeshProUGUI txt;
+    [SerializeField] GameObject PlaceScreen;
+
     private void Start()
     {
         touched = true;
@@ -17,6 +19,10 @@ public class PlayerLapCounter : MonoBehaviour
     private void Update()
     {
         txt.text = lap + "/" + totalLap;
+        if(lap == totalLap + 1)
+        {
+            PlaceScreen.SetActive(true);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
