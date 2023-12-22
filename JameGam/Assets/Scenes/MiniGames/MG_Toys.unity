@@ -1094,6 +1094,7 @@ MonoBehaviour:
   toys:
   - {fileID: 3113865310866102417, guid: 6b44b24d144aff44cad7f8b3bb1445f4, type: 3}
   interval: 0.75
+  toy: 15
 --- !u!1 &1553364771
 GameObject:
   m_ObjectHideFlags: 0
