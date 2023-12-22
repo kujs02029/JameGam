@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class DontDestroyOnLoad : MonoBehaviour
 {
     int c = 0;
-
+    public ReindeerController one;
+    public ReindeerController two;
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,7 +26,8 @@ public class DontDestroyOnLoad : MonoBehaviour
             {
                 if(PlayerPrefs.GetFloat("S") == 1)
                 {
-
+                    one.speed = 23.5f;
+                    two.speed = 23.5f;
                 }
                 gameObject.SetActive(true);
                 DontDestroyOnLoad[] dontDestroyOnLoads = new DontDestroyOnLoad[0];
