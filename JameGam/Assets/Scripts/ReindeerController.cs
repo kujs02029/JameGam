@@ -17,14 +17,15 @@ public class ReindeerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Minus();
         wheel = GetComponent<WheelJoint2D>();
         rb  = GetComponent<Rigidbody2D>();  
     }
     void Minus()
     {
-        if (speed > 15)
+        if (speed > 5)
         {
-            speed--;
+            speed-=.25f;
         }
         Invoke("Minus", .8f);
 

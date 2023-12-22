@@ -20,7 +20,7 @@ public class Roof : MonoBehaviour
             if(collision.gameObject.GetComponent<elfMovement>().num == num)
             {
                 collision.gameObject.transform.position = stop.transform.position;
-                SceneManager.LoadScene(2);;
+                SceneManager.LoadScene(2);
             }
                 
         }

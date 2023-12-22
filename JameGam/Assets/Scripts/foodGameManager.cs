@@ -32,7 +32,7 @@ public class foodGameManager : MonoBehaviour
         {
 
             PlayerPrefs.SetFloat("S",1);
-            SceneManager.LoadScene(2);;
+            FindObjectOfType<CanvasAnim>().Succeed();
         }
     }
 }

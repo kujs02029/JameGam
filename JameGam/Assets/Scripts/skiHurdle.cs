@@ -17,7 +17,7 @@ public class skiHurdle : MonoBehaviour
         if (!touch && !cos)
         {
             PlayerPrefs.SetFloat("S", 0);
-            SceneManager.LoadScene(2);;
+            FindObjectOfType<CanvasAnim>().Fail();
         }
     }
     private void Update()

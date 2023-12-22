@@ -49,7 +49,7 @@ public class GingerbreadGameManager : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(2);
+                FindObjectOfType<CanvasAnim>().Succeed();
                 PlayerPrefs.SetFloat("S", 1);
                 break;
             }

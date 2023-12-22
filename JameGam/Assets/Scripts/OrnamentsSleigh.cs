@@ -11,7 +11,7 @@ public class OrnamentsSleigh : MonoBehaviour
         if (!FindObjectOfType<Ornaments>())
         {
             PlayerPrefs.SetFloat("S", 1);
-            SceneManager.LoadScene(2);;
+            FindObjectOfType<CanvasAnim>().Succeed();
         }
     }
 }

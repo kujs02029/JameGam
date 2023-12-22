@@ -59,10 +59,11 @@ public class TreeManager : MonoBehaviour
 
 
             PlayerPrefs.SetFloat("S", 1);
+            FindObjectOfType<CanvasAnim>().Succeed();
         }
         if (c == 4)
         {
-            SceneManager.LoadScene(2);;
+            FindObjectOfType<CanvasAnim>().Fail();
             PlayerPrefs.SetFloat("S", 0);
         }
     }

@@ -21,7 +21,7 @@ public class ToyGameManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("S", 1);
 
-            SceneManager.LoadScene(2);;
+            FindObjectOfType<CanvasAnim>().Succeed();
         }
         c++;
         Instantiate(toys[Random.Range(0, toys.Count)], new Vector2(-16, 7), Quaternion.identity);
@@ -35,7 +35,7 @@ public class ToyGameManager : MonoBehaviour
         if (collision.GetComponent<Toys>().bad)
         {
             PlayerPrefs.SetFloat("S", 0);
-            SceneManager.LoadScene(2);;
+            FindObjectOfType<CanvasAnim>().Fail();
         }
     }
 }

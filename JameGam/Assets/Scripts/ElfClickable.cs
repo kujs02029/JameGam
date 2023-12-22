@@ -11,10 +11,12 @@ public class ElfClickable : MonoBehaviour
         if (enm)
         {
             PlayerPrefs.SetFloat("S", 1);
+            FindObjectOfType<CanvasAnim>().Succeed();
         }
         else
+        {
             PlayerPrefs.SetFloat("S", 0);
-
-        SceneManager.LoadScene(2);;
+            FindObjectOfType<CanvasAnim>().Succeed();
+        }
     }
 }

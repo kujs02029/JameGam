@@ -32,10 +32,17 @@ public class BellGameManager : MonoBehaviour
                 }
             }
             if (!good)
+            {
                 PlayerPrefs.SetFloat("S", 0);
+                FindObjectOfType<CanvasAnim>().Fail();
+            }
             else
+            {
                 PlayerPrefs.SetFloat("S", 1);
-            SceneManager.LoadScene(2);
+                FindObjectOfType<CanvasAnim>().Succeed();
+            }
         }
     }
+
+    
 }

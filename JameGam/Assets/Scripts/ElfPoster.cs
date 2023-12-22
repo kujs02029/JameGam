@@ -5,7 +5,7 @@ using UnityEngine;
 public class ElfPoster : MonoBehaviour
 {
     public int num;
-    [SerializeField] SpriteRenderer renderer;
+    [SerializeField] SpriteRenderer renderer_;
     // Start is called before the first frame update
     void Start()
     {
