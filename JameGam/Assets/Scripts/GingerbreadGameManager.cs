@@ -51,6 +51,7 @@ public class GingerbreadGameManager : MonoBehaviour
             {
                 SceneManager.LoadScene(1);
                 PlayerPrefs.SetFloat("S", 1);
+                break;
             }
 
         }
