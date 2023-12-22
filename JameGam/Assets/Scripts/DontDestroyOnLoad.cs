@@ -21,7 +21,7 @@ public class DontDestroyOnLoad : MonoBehaviour
         c++;
         if(c > 1)
         {
-            if(scene.buildIndex == 0)
+            if(scene.buildIndex == 1)
             {
                 gameObject.SetActive(true);
                 DontDestroyOnLoad[] dontDestroyOnLoads = new DontDestroyOnLoad[0];
