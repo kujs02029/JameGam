@@ -106,7 +106,10 @@ public class Follow : MonoBehaviour
             pos = _points[_currentTargetIdx].position + new Vector3(Random.Range(-accuracy, accuracy), Random.Range(-accuracy, accuracy));
 
         }
+    }
 
+    private void FixedUpdate()
+    {
         if (!stop)
         {
             switch (MovementStyle)
