@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 1782076585}
   - component: {fileID: 1782076588}
   m_Layer: 0
-  m_Name: MUSIC THAT'S ACTUALLY SO CRAZY LOL
+  m_Name: MusicSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,7 +815,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c66b34776c1ca04fb4f388bd828c8f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -889,7 +889,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -908,7 +908,7 @@ Transform:
   m_GameObject: {fileID: 1782076584}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 765.96796, y: 493.03165, z: -7.1385374}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

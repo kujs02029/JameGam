@@ -18951,7 +18951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b6278190115844c8fbbfa5623fa2c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalLap: 5
+  totalLap: 3
   touched: 1
   touched1: 1
   txt: {fileID: 1815887514}
