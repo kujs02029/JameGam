@@ -11,47 +11,46 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] List<string> texts;
     [SerializeField] TextMeshProUGUI tmp;
     [SerializeField] List<ReindeerController> rein;
+    bool enable;
 
     private void Start()
     {
-        txtCnt = 3;
-        nextText();
+        txtCnt = 0;
     }
-    public void nextText()
+    private void Update()
     {
-        foreach (var reindeer in rein)
+        if (enable)
         {
-            reindeer.enabled = false;
-        }
-        textBox.SetActive(true);
-        for(int i = 0; i < txtCnt;)
-        {
-            while (!Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
-                
+                txtCnt++;
+                if(txtCnt == texts.Count)
+                {
+                    foreach (var reindeer in rein)
+                    {
+                        reindeer.enabled = true;
+                    }
+                    enable = false;
+                    textBox.gameObject.SetActive(false);
+                    tmp.text = "";
+                    return;
+                }
+                tmp.text = texts[txtCnt];
             }
-            tmp.text = texts[i];
-            texts.RemoveAt(i);
         }
-        cnt++;
-        foreach (var reindeer in rein)
-        {
-            reindeer.enabled = true;
-        }
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (cnt == 1)
+        if (txtCnt < texts.Count)
         {
-            txtCnt = 2;
-            textBox.SetActive(false);
+            textBox.gameObject.SetActive(true);
+            foreach (var reindeer in rein)
+            {
+                reindeer.enabled = false;
+            }
+            tmp.text = texts[0];
+            enable = true;
+
         }
-        else if (cnt == 2)
-        {
-            txtCnt = 2;
-            textBox.SetActive(false);
-        }
-        nextText();
     }
 }

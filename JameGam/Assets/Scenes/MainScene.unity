@@ -19310,6 +19310,7 @@ MonoBehaviour:
   touched: 1
   touched1: 1
   txt: {fileID: 1815887514}
+  placeTxt: {fileID: 577106301}
   PlaceScreen: {fileID: 1095891647}
 --- !u!1 &1908859411
 GameObject:
