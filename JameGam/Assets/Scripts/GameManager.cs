@@ -9,4 +9,12 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void Tutorial()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void Main()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
