@@ -26,11 +26,12 @@ public class TutorialManager : MonoBehaviour
         textBox.SetActive(true);
         for(int i = 0; i < txtCnt;)
         {
-            if (Input.GetMouseButtonDown(0))
+            while (!Input.GetMouseButtonDown(0))
             {
-                tmp.text = texts[i];
-                texts.RemoveAt(i);
+                
             }
+            tmp.text = texts[i];
+            texts.RemoveAt(i);
         }
         cnt++;
         foreach (var reindeer in rein)
