@@ -15,7 +15,7 @@ public class ElfManager : MonoBehaviour
         for(int i = 0; i < 5; i++) {
             elfN.Add(elves[Random.Range(0, 20-i)]);
             elves.Remove(elfN[i]);
-            GameObject e = Instantiate(elf, new Vector3(Random.Range(-8f, 4), Random.Range(-3f, 3f)), Quaternion.identity);
+            GameObject e = Instantiate(elf, new Vector3(Random.Range(-8f, 4), Random.Range(-3f, 1.7f)), Quaternion.identity);
             e.GetComponent<SpriteRenderer>().sprite = elfN[i];
             if (i == 0)
                 e.GetComponent<ElfClickable>().enm = true;
