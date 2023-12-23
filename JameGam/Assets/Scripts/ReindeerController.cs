@@ -30,10 +30,12 @@ public class ReindeerController : MonoBehaviour
     }
     void Minus()
     {
+        float damage = Random.Range(.13f, .25f);
         if (speed >= 5)
         {
-            speed-=.2f;
+            speed-= damage;
         }
+        float seconds = Random.Range(.7f, 1.2f);
         Invoke("Minus", 1f);
 
     }
