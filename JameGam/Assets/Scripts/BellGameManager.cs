@@ -7,7 +7,9 @@ public class BellGameManager : MonoBehaviour
 {
     public List<int> clicked;
     public List<int> org;
-
+    public List<GameObject> bells;
+    public List<AudioSource> sounds;
+    int c;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +18,33 @@ public class BellGameManager : MonoBehaviour
         {
             org.Add(Random.Range(1, 5));
         }
+        Invoke("PlayNotes", 1);
     }
 
-    // Update is called once per frame
+    void PlayNotes()
+    {
+        foreach(GameObject go in bells)
+        {
+            go.transform.localScale = new Vector3(2,2);
+        }
+        bells[org[c]-1].transform.localScale = new Vector3(2.5f, 2.5f, 1);
+        sounds[org[c]-1].Play();
+        c++;
+        if(c < 5)
+        {
+            Invoke("PlayNotes", 1);
+        }
+    }
     void Update()
     {
         if(clicked.Count == org.Count)
         {
-            bool good = false;
+            bool good = true;
             for (int i = 0; i < clicked.Count; i++)
             {
-                if (clicked[i] == org[i])
+                if (clicked[i] != org[i])
                 {
-                    good = true;
+                    good = false;
                 }
             }
             if (!good)
