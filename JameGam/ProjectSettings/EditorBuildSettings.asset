@@ -33,9 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGames/MG_Ornaments.unity
     guid: 3c1c42b745a42904490277733b8667bb
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MG_Ski.unity
-    guid: 4b1f85b03d3b81749905b213dd74221c
-  - enabled: 1
     path: Assets/Scenes/MiniGames/MG_Toys.unity
     guid: 2bf9dc8925ca0484cae19ce0f2b60bac
   - enabled: 1
