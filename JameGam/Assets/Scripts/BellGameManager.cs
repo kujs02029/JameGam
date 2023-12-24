@@ -33,7 +33,6 @@ public class BellGameManager : MonoBehaviour
             bells[org[c] - 1].transform.localScale = new Vector3(2.5f, 2.5f, 1);
             sounds[org[c] - 1].Play();
             c++;
-            return;
         }
         if(c <= 5)
         {
