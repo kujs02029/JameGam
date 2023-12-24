@@ -27,10 +27,15 @@ public class BellGameManager : MonoBehaviour
         {
             go.transform.localScale = new Vector3(2,2);
         }
-        bells[org[c]-1].transform.localScale = new Vector3(2.5f, 2.5f, 1);
-        sounds[org[c]-1].Play();
-        c++;
-        if(c < 5)
+        if(c!= 5)
+        {
+
+            bells[org[c] - 1].transform.localScale = new Vector3(2.5f, 2.5f, 1);
+            sounds[org[c] - 1].Play();
+            c++;
+            return;
+        }
+        if(c <= 5)
         {
             Invoke("PlayNotes", 1);
         }
