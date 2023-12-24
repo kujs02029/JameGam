@@ -10,7 +10,7 @@ public class Gingerbread : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<Animator>().gameObject;
+        player = FindObjectOfType<elfGingerMovement>().gameObject;
     }
 
     // Update is called once per frame

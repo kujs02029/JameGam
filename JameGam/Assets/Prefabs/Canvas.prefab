@@ -307,14 +307,15 @@ MonoBehaviour:
   - empty
   - empty
   - empty
-  - Bell
-  - Tree
-  - Elf
-  - Food
-  - Ginger
-  - ornamen
-  - ski
-  - toy
+  - Bells will start playing, click them in the same order!
+  - Try to click when the bar is in the green zone to do the most damage and cut
+    the tree!
+  - Find the correct elf from the wanted poster!
+  - Sort foods into correct slots!
+  - Shoot down gingerbread man and snowman!
+  - Get the ornaments off the sleigh by dragging.
+  - Use arrow keys to move and try to go in the hurdle.
+  - Click to destroy the broken toys and keep the good ones!
   tm: {fileID: 5686557245025841433}
 --- !u!1 &5348664611577219094
 GameObject:
