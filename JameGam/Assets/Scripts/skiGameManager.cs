@@ -32,7 +32,6 @@ public class skiGameManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("S", 1);
 
-            print((hurdles, c));
             FindObjectOfType<CanvasAnim>().Succeed();
         }
     }

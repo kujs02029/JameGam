@@ -10,7 +10,6 @@ public class anvilTrigger : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<elfMovement>() || collision.gameObject.GetComponent<elfGingerMovement>())
         {
-            print("Collided");
             press.SetActive(true);
             entered = true;
         }

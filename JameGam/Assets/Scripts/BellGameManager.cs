@@ -50,7 +50,6 @@ public class BellGameManager : MonoBehaviour
             if (!good)
             {
                 PlayerPrefs.SetFloat("S", 0);
-                print("Sui");
                 FindObjectOfType<CanvasAnim>().Fail();
             }
             else

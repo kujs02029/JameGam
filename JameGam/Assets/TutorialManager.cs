@@ -73,11 +73,13 @@ public class TutorialManager : MonoBehaviour
         canContinue = false;
         foreach(char letter in line.ToCharArray())
         {
+            /*
             if (Input.GetMouseButtonDown(0))
             {
                 tmp.maxVisibleCharacters = line.Length;
                 break;
             }
+            */
             tmp.maxVisibleCharacters++;
             yield return new WaitForSeconds(typingSpeed);
         }

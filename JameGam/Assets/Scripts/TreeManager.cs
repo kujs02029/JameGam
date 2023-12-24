@@ -13,7 +13,6 @@ public class TreeManager : MonoBehaviour
     public GameObject s2;
     public void damageTree()
     {
-        print(health);
         if(br.gameObject.transform.position.y > 0)
         {
             int damage = Random.Range(40, 60);

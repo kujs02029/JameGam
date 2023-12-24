@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SceneTransition(int num)
     {
-        print("asd");
         transition.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(num);

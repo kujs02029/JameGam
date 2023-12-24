@@ -48,7 +48,6 @@ public class ReindeerController : MonoBehaviour
     {
         fillspeed = speed - 5;
         fill.fillAmount = fillspeed / maxspeed;
-      //  print(wheel.jointLinearSpeed);
         if (wheel.jointLinearSpeed > 7 || wheel.jointLinearSpeed < -7)
         {
             if (!invincible)

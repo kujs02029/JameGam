@@ -27,7 +27,6 @@ public class PlayerLapCounter : MonoBehaviour
         if(lap == totalLap + 1)
         {
             PlaceScreen.SetActive(true);
-            print("Done");
             if(place == 1)
                 placeTxt.text = "1st Place";
             else if (place == 2)
@@ -45,7 +44,6 @@ public class PlayerLapCounter : MonoBehaviour
             touched = false;
             touched1 = false;
             lap++;
-            print(lap + "/" + totalLap);
         }
         if (collision.CompareTag("1"))
         {

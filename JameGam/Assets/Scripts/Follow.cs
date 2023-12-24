@@ -157,7 +157,6 @@ public class Follow : MonoBehaviour
     void startAgain()
     {
         stop = false;
-        print((pos, transform.position));
         pos = _points[_currentTargetIdx].position + new Vector3(Random.Range(-accuracy, accuracy), Random.Range(-accuracy, accuracy));
 
     }
