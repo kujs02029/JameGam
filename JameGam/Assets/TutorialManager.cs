@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] List<string> texts;
     [SerializeField] TextMeshProUGUI tmp;
     [SerializeField] List<ReindeerController> rein;
+    [SerializeField] float typingSpeed = 0.04f;
+    private Coroutine displayLineCoroutine;
     bool enable;
+    bool canContinue = false;
 
     private void Start()
     {
@@ -21,7 +25,7 @@ public class TutorialManager : MonoBehaviour
     {
         if (enable)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && canContinue)
             {
                 txtCnt++;
                 if(txtCnt == texts.Count)
@@ -35,7 +39,11 @@ public class TutorialManager : MonoBehaviour
                     tmp.text = "";
                     return;
                 }
-                tmp.text = texts[txtCnt];
+                if (displayLineCoroutine != null)
+                {
+                    StopCoroutine(displayLineCoroutine);
+                }
+                displayLineCoroutine = StartCoroutine(displayLine(texts[txtCnt]));
             }
         }
     }
@@ -48,9 +56,31 @@ public class TutorialManager : MonoBehaviour
             {
                 reindeer.enabled = false;
             }
-            tmp.text = texts[0];
+            if(displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            displayLineCoroutine = StartCoroutine(displayLine(texts[0]));
             enable = true;
 
         }
+    }
+
+    IEnumerator displayLine(string line)
+    {
+        tmp.text = line;
+        tmp.maxVisibleCharacters = 0;
+        canContinue = false;
+        foreach(char letter in line.ToCharArray())
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                tmp.maxVisibleCharacters = line.Length;
+                break;
+            }
+            tmp.maxVisibleCharacters++;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+        canContinue = true;
     }
 }
