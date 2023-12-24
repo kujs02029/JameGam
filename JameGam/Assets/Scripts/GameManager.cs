@@ -6,25 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Animator transition;
-    public void Play()
+    public void Play(int num)
     {
-        StartCoroutine(SceneTransition());
-        SceneManager.LoadScene(1);
+        StartCoroutine(SceneTransition(num));
     }
-    public void Tutorial()
+    IEnumerator SceneTransition(int num)
     {
-        StartCoroutine(SceneTransition());
-        SceneManager.LoadScene(11);
-    }
-    public void Main()
-    {
-        StartCoroutine(SceneTransition());
-        SceneManager.LoadScene(0);
-    }
-
-    IEnumerator SceneTransition()
-    {
+        print("asd");
         transition.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(num);
     }
 }
