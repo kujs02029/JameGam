@@ -8,7 +8,6 @@ public class ElfManager : MonoBehaviour
     [SerializeField] GameObject elfF;
     [SerializeField] List<Sprite> elves;
     [SerializeField] List<Sprite> elfN;
-    [SerializeField] ElfPoster poster;
     // Start is called before the first frame update
     void Start()
     {

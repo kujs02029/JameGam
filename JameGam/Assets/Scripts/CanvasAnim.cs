@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CanvasAnim : MonoBehaviour
 {
+    [SerializeField] Animator transition;
     public void Succeed()
     {
         transform.GetChild(0).gameObject.SetActive(true);
@@ -18,6 +19,12 @@ public class CanvasAnim : MonoBehaviour
 
     void LoadScene()
     {
+        StartCoroutine(SceneTransition());
         SceneManager.LoadScene(2);
+    }
+    public IEnumerator SceneTransition()
+    {
+        transition.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
     }
 }

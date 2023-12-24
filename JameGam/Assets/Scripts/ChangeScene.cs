@@ -5,11 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    [SerializeField] Animator transition;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<elfGingerMovement>())
         {
+            StartCoroutine(SceneTransition());
             SceneManager.LoadScene(1);
         }
+    }
+    public IEnumerator SceneTransition()
+    {
+        transition.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
     }
 }

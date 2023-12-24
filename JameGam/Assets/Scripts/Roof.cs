@@ -7,6 +7,7 @@ public class Roof : MonoBehaviour
 {
     public int num;
     public GameObject stop;
+    [SerializeField] Animator transition;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "Elf")
@@ -20,9 +21,16 @@ public class Roof : MonoBehaviour
             if(collision.gameObject.GetComponent<elfMovement>().num == num)
             {
                 collision.gameObject.transform.position = stop.transform.position;
+                StartCoroutine(SceneTransition());
                 SceneManager.LoadScene(2);
             }
                 
         }
+    }
+
+    public IEnumerator SceneTransition()
+    {
+        transition.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
     }
 }
