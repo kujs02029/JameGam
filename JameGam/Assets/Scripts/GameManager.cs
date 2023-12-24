@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public IEnumerator SceneTransition()
+    IEnumerator SceneTransition()
     {
         transition.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
