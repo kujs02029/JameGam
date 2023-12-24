@@ -10,13 +10,13 @@ public class ChangeScene : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<elfGingerMovement>())
         {
-            StartCoroutine(SceneTransition());
-            SceneManager.LoadScene(1);
+            StartCoroutine(SceneTransition(1));
         }
     }
-    public IEnumerator SceneTransition()
+    public IEnumerator SceneTransition(int num)
     {
         transition.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(num);
     }
 }

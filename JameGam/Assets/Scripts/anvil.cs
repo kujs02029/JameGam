@@ -14,13 +14,13 @@ public class anvil : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && trigger.entered == true)
         {
-            StartCoroutine(SceneTransition());
-            SceneManager.LoadScene(Random.Range(3, 11));
+            StartCoroutine(SceneTransition(Random.Range(3,11)));
         }
     }
-    public IEnumerator SceneTransition()
+    public IEnumerator SceneTransition(int num)
     {
         transition.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(num);
     }
 }

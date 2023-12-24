@@ -21,16 +21,17 @@ public class Roof : MonoBehaviour
             if(collision.gameObject.GetComponent<elfMovement>().num == num)
             {
                 collision.gameObject.transform.position = stop.transform.position;
-                StartCoroutine(SceneTransition());
-                SceneManager.LoadScene(2);
+                StartCoroutine(SceneTransition(2));
+                
             }
                 
         }
     }
 
-    public IEnumerator SceneTransition()
+    public IEnumerator SceneTransition(int num)
     {
         transition.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(num);
     }
 }

@@ -257,8 +257,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4293914609
+  m_fontColor: {r: 0.9450981, g: 0.93725497, b: 0.93725497, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5307,11 +5307,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_HighlightedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_PressedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_SelectedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_DisabledColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
+    m_NormalColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
+    m_HighlightedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
+    m_PressedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
+    m_SelectedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
+    m_DisabledColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5326,7 +5326,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1041605035}
+  m_TargetGraphic: {fileID: 1115362526}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5440,11 +5440,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_HighlightedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_PressedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_SelectedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
-    m_DisabledColor: {r: 0.19215688, g: 0.19215688, b: 0.19215688, a: 1}
+    m_NormalColor: {r: 0.9450981, g: 0.93725497, b: 0.93725497, a: 0}
+    m_HighlightedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
+    m_PressedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
+    m_SelectedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 0}
+    m_DisabledColor: {r: 0.19215688, g: 0.19215688, b: 0.19215688, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5459,7 +5459,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1486023997}
+  m_TargetGraphic: {fileID: 1115362526}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5547,7 +5547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200.6, y: 126.1}
+  m_AnchoredPosition: {x: -209.1, y: 150.2}
   m_SizeDelta: {x: 480, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275951079
@@ -5570,7 +5570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: Jolly Race
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54d5d5dd7fb184540ae22ed7cda98fe2, type: 2}
   m_sharedMaterial: {fileID: 5069568751420032465, guid: 54d5d5dd7fb184540ae22ed7cda98fe2, type: 2}
@@ -5633,7 +5633,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 43.64557, y: 0, z: 0, w: -78.477234}
+  m_margin: {x: 43.64557, y: 52.763756, z: 0, w: -78.477234}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5704,7 +5704,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e45171f3dc90f5541a16e2f85344f3c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7ab03143be81f34d917d372db677085, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5895,8 +5895,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4293914609
+  m_fontColor: {r: 0.9450981, g: 0.93725497, b: 0.93725497, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

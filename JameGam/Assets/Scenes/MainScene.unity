@@ -1839,8 +1839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   num: 4
-  stop: {fileID: 0}
-  transition: {fileID: 0}
+  stop: {fileID: 969877325}
+  transition: {fileID: 1744844398}
 --- !u!1 &352103340
 GameObject:
   m_ObjectHideFlags: 0
@@ -16414,7 +16414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 1
   stop: {fileID: 1105447093}
-  transition: {fileID: 0}
+  transition: {fileID: 1744844398}
 --- !u!1 &1575174163
 GameObject:
   m_ObjectHideFlags: 0
@@ -18031,8 +18031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   num: 2
-  stop: {fileID: 0}
-  transition: {fileID: 0}
+  stop: {fileID: 233288195}
+  transition: {fileID: 1744844398}
 --- !u!1 &1815887512
 GameObject:
   m_ObjectHideFlags: 0
@@ -20238,8 +20238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   num: 3
-  stop: {fileID: 0}
-  transition: {fileID: 0}
+  stop: {fileID: 552921333}
+  transition: {fileID: 1744844398}
 --- !u!1 &2057807155
 GameObject:
   m_ObjectHideFlags: 0
